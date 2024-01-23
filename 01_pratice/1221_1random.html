@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="dinner">h1:今天超冷，晚餐想要吃火鍋</h1>
+    <script>
+        var day = ["今天", "明天", "下周五", "下個月"];
+        var meal = ["早餐", "午餐", "晚餐", "早午餐", "下午茶", "點心", "宵夜"];
+        var food = ["火鍋", "麻辣燙", "關東煮", "羊肉爐", "藥膳排骨"];
+        var x = Math.floor(Math.random() * day.length);
+        var y = Math.floor(Math.random() * meal.length);
+        var z = Math.floor(Math.random() * food.length);
+        var msg = `${day[x]}超冷，我的${meal[y]}想要吃${food[z]}!`;
+        document.getElementById('dinner').innerText = msg;
+    </script>
+</body>
+
+</html>

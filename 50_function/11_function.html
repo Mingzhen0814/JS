@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>將功能獨立出來，提高程式的可用性</h4>
+    <p><a href="https://www.w3schools.com/js/js_functions.asp">https://www.w3schools.com/js/js_functions.asp</a></p>
+
+    <script>
+
+        // 10. 函式宣告（Function Declaration）
+        function f(canNotVar) {
+            console.log("this is a functon.");
+            console.log(canNotVar);
+        }
+        f(50);
+
+        function func(a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+
+        // 20. 需要資訊的函式 / 傳入參數的函數
+        //     呼叫需要資訊的函式時，要把資訊帶入
+
+        //參數: 只有名稱，前方不可有vr/ecst
+        //参數: 可以零個，也可以多個，看需求決定
+        //參數: 如果資料數量大於或者小於參數數量，程式不會有紅色錯誤
+        func(10, 20, 30); // 10 20 30
+        func(10); // 10 undefined undefined
+        func(10, 20, 30, 40); // 10 20 30
+
+        // 30. 函式回傳值
+        function sum(x, y) {
+            var z = x + y;
+            return z;
+        }
+        var total = sum(56, 100);
+        console.log(total);
+
+        // 40. 函式運算式（Function Expressions）
+        //     變數 存放 計畫的內容，但呼叫時要小心
+        // i(); // 先呼叫再宣告function會error // i is not a function
+
+        var i = function () {
+            console.log("1235");
+        }
+        i();
+
+        // 45. 函式運算式，也可以設計有參數的形式
+        var j = function (v1, v2, v3) {
+            console.log(v1);
+            console.log(v2);
+            console.log(v3);
+
+            // var s = v1 + v2 + v3;
+            // return s;
+            return v1 + v2 + v3;
+        }
+        var t = j(1, 2, 3);
+        console.log(t);
+
+    </script>
+</body>
+
+</html>

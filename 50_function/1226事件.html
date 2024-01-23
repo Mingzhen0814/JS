@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="text">headline</h1>
+    <script>
+        var x = document.getElementById("text").innerText;
+        console.log(x);
+        var y = text.innerText;
+        console.log(y);
+        
+        // 新增事件
+        document.getElementById('text').addEventListener('click', function () {
+            console.log("click");
+        })
+
+        text.addEventListener('click', function () {
+            console.log("click~");
+        })
+
+        text.onclick = function () {
+            console.log("click!");
+        }
+    </script>
+</body>
+
+</html>

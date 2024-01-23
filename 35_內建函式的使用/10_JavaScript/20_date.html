@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Date Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_dates.asp">https://www.w3schools.com/js/js_dates.asp</a></p>
+    <h4>JavaScript Get Date Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_date_methods.asp">https://www.w3schools.com/js/js_date_methods.asp</a>
+    </p>
+    <hr>
+    <pre>
+    生成日期物件的方法：
+        new Date()
+        new Date(milliseconds)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    </pre>
+
+    <script>
+        // 宣告一個日期物件
+        var todaysDate = new Date(); // 現在的時間
+        var date1 = new Date("2000/08/14");
+        var date2 = new Date(2008, 12, 25); // 月份範圍是0-11 寫12會自動被進位至年
+        console.log(todaysDate); // Thu Dec 21 2023 10:49:25 GMT+0800 (台北標準時間)
+        console.log(date1); // Mon Aug 14 2000 00:00:00 GMT+0800 (台北標準時間)
+        console.log(date2); // Sun Jan 25 2009 00:00:00 GMT+0800 (台北標準時間)
+
+        // 取得年份
+        var fullYear = todaysDate.getFullYear();
+        console.log(fullYear); // 2023
+
+        // 取得月份 (請注意這裡)(預設範圍: 0-11)
+        var month = todaysDate.getMonth();
+        console.log(month); // 11
+        console.log(month + 1); // 12
+
+        // 取得日期
+        var date = todaysDate.getDate();
+        console.log(date); // 21
+
+        // 取得星期 (請注意這裡)(預設範圍: 0-6(星期天為0))
+        var day = todaysDate.getDay();
+        console.log(day); // 4
+
+        // 取得時間
+        var hours = todaysDate.getHours();
+        console.log(hours); // 11
+
+        // 取得分鐘
+        var minutes = todaysDate.getMinutes();
+        console.log(minutes); // 5
+
+        // 若日期物件生成後，我們需要加一天
+        var plusOneDay = new Date();
+        // plusOneDay.setDate(22);
+        plusOneDay.setDate(plusOneDay.getDate() + 1); // Fri Dec 22 2023 11:24:43 GMT+0800 (台北標準時間)
+        console.log(plusOneDay);
+
+        // 若日期物件生成後，我們需要加一個月
+        var plusOneMonth = new Date();
+        plusOneMonth.setMonth(plusOneMonth.getMonth() + 1); // Fri Dec 22 2023 11:24:43 GMT+0800 (台北標準時間)
+        console.log(plusOneMonth);
+
+
+        // 小練習：如何透過日期的加減，取得這個月的最後一天(多一天就變下一個月)?
+        // var lastDate = new Date("2024/1/30"); 
+        // lastDate.setDate(1); // 先將日期歸零才比較不會出錯
+        // lastDate.setMonth(lastDate.getMonth()+1);
+        // lastDate.setDate(lastDate.getDate()-1);
+        // console.log(lastDate);
+        // console.log(lastDate.getDate());
+
+        var todaysDate = new Date();
+        var lastDate = new Date(todaysDate.getFullYear(), todaysDate.getMonth()+1, 0); // Sun Dec 31 2023 00:00:00 GMT+0800 (台北標準時間)
+        console.log(lastDate);
+
+        // 小練習：宣告兩個日期物件，並指定日期後，進行日期相減
+        // millisecond(毫秒) = 86400000 = 1000*60*60*24
+        var date1 = new Date();
+        var date2 = new Date("2024/1/4");
+        var different = date2 - date1;
+        console.log(different); // 1160233374
+        console.log(`相差${different/86400000}天`); // 相差13.426252337962962天
+
+    </script>
+
+</body>
+
+</html>

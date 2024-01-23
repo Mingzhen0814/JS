@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <button onclick="sum()">接收輸入，並顯示結果</button>
+
+    <script>
+        // 1. 按鈕點下去以後，才開始做指定的事情
+        // 2. 指定的事情為
+        // 2 - 1 跳出一個對話視窗，讓使用者可以輸入資料
+        // 2 - 2 再跳出一個對話視窗，讓使用者可以輸入資料
+        // 2 - 3 把使用者輸入的資料相加
+        // 2 - 4 透過 alert 將相加後的結果顯示出來
+
+
+        function sum() {
+            // 10. 透過 prompt 接收使用者輸入的值，並記錄下來
+            var x = prompt("請輸入數字: ");
+            var y = prompt("再輸入一個數字: ");
+            var z = parseInt(x) + parseInt(y);
+            // 20. 將記錄到的資訊 alert 出來
+            window.alert(`總和為${z}`);
+        }
+    </script>
+
+</body>
+
+</html>

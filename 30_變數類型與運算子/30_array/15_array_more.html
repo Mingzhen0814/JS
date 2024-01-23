@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <img src="./byReference.jpg">
+    <script>
+        // by value(傳值) vs by reference(傳址) -> 取決於值的記憶體大小
+        var x = 5;
+        var y = x;
+        y = 100;
+        console.log(x) // 5 -> by value(傳值)
+
+
+        // 10. 宣告一個陣列 apple ， 存放 1,2,3,4,5,6
+        var apple = [1, 2, 3, 4, 5, 6];
+
+        // 20. 宣告另外一個陣列 bee ， 讓 bee = apple
+        var bee = apple;
+
+        // 30. 取得 bee 第一個位置的值
+        console.log(bee[0]);
+
+        // 40. 修改 bee 第一個位置的值
+        bee[0] = 999;
+
+        // 50. 將 apple 列印出來查看
+        console.log(apple); // (6) [999, 2, 3, 4, 5, 6] -> by reference(傳址)
+    </script>
+</body>
+
+</html>

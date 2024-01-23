@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bigger()">放大</button>
+    <hr>
+    <p id="text">點擊按鈕後，放大文字!</p>
+    <script>
+        var i = 16;
+        // 點擊按鈕
+        function bigger() {
+            console.log("綁定成功");
+            // 累加字型大小
+            i += 2;
+
+            // document.getElementById("text").style.fontSize = `${i}px`;
+            var j = window.getComputedStyle(document.getElementById("text")).getPropertyValue("font-size");
+            console.log(j); // 16 px
+            console.log(parseInt(j)); // 16
+            document.getElementById("text").style.fontSize = parseInt(j) + 2 +"px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+
+        // 10. 計算從1加到10數值為多少
+        var x = 0;
+        var sum = 0;
+        while (x <= 10) {
+            console.log(`第${x}次計算，總和為${sum}`);
+            x++;
+            sum = sum + x;
+        }
+
+        // 20. 網頁必須輸入通關密碼1234才會停止
+        /* var PWD = 1234
+        while (x != PWD) {
+            var x = prompt("請輸入網頁密碼: 1234");
+        } */
+
+        /* var b = true;
+        while (b) {
+            var x = prompt("請輸入網頁密碼: 1234");
+            if (x == 1234) {
+                b = false;
+            } else {
+                b = true;
+            }
+        } */
+
+        while (prompt("請輸入網頁密碼: 1234") != 1234) {}
+    </script>
+</body>
+
+</html>

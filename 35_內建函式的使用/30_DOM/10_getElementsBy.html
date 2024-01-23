@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript HTML DOM Elements</h4>
+    <p><a href="https://www.w3schools.com/js/js_htmldom_elements.asp">https://www.w3schools.com/js/js_htmldom_elements.asp</a></p>
+
+    <hr>
+
+    <h2 id="myApple">Apple</h2>
+    <h2 class="group1">Bee</h2>
+    <h2 class="group1">Cat</h2>
+    <h2>Dog</h2>
+    <h2>Egg</h2>
+
+    <script>
+
+        // 10. 透過 getElementsByTagName 取得所有 <h2> 元素
+        var x = document.getElementsByTagName("h2");
+        console.log(x);
+        
+        // 20. 透過 getElementsByClassName 取得擁有 class 類別的 元素
+        var y = document.getElementsByClassName("group1");
+        console.log(y);
+
+        // 30. 透過 getElementById 取得 id 為 myApple 的元素
+        var z = document.getElementById("myApple");
+        console.log(z);
+
+        // 40. 透過 CSS Selectors 取得 標籤
+        //     querySelector()
+        //     querySelectorAll()
+        var i = document.querySelector(".group1");
+        console.log(i); // 只會抓第一個
+
+        var k = document.querySelector("#myApple");
+        console.log(k); 
+        
+        var k = document.querySelectorAll(".group1");
+        console.log(k);
+
+        var l = document.querySelectorAll("#myApple");
+        console.log(l); // 即使ID為唯一值，只抓到一個仍會以NodeList包裝
+
+    </script>
+
+
+</body>
+
+</html>

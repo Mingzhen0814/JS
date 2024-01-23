@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Switch Statement</h4>
+    <p><a href='https://www.w3schools.com/js/js_switch.asp'>https://www.w3schools.com/js/js_switch.asp</a></p>
+
+    <pre>
+
+        switch(expression) {
+            case x:
+              // code block
+              break;
+            case y:
+              // code block
+              break;
+            default:
+              // code block
+        }
+        
+    </pre>
+
+    <script>
+        // 10. 結構說明與 break; 關鍵字 // 要break;才不會做到其他case
+        var x = 85;
+        switch (x) {
+            case 5:
+                console.log("5");
+                console.log("5");
+                console.log("5");
+                break;
+            case 10:
+                console.log("10");
+                break;
+            default: // 以上皆非
+                console.log("other");
+                console.log("other");
+                break;
+        }
+
+        // 20. 如果有多項條件的話，可以合併撰寫
+        var d = 12;
+        switch (d) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                console.log("這個月有31天");
+                break;
+            case 4: case 6: case 9: case 11:
+                console.log("這個月有30天");
+                break;
+            case 2:
+                console.log("這個月有28或29天");
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>The Window Object</h4>
+    <p><a href="https://www.w3schools.com/jsref/obj_window.asp">https://www.w3schools.com/jsref/obj_window.asp</a></p>
+
+    <script>
+        
+        // 10. 測試 window.alert("Hi");  和  
+        //                 alert("HiHi"); 
+        //     是否有不同？
+        // window.alert("msg");
+        // window.alert(123);
+        // alert("msg"); // 如果方法屬於window物件，可省略物件不寫
+
+        // 20. 測試 window.confirm();
+        // var x = window.confirm("confirm?");
+        // console.log(x); // true or false
+
+        if(window.confirm("你確定要離開?")){
+            window.alert("好掰")
+        }else{
+            window.alert("還不離開?")
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Arrays</h4>
+    <p><a href="http://www.w3schools.com/js/js_arrays.asp">http://www.w3schools.com/js/js_arrays.asp</a></p>
+
+    <p>陣列使用時機：相同的資料型態（雖然 JavaScript 可以不需要相同，但還是盡量避免）</p>
+    <p>具有一致的意義、需要參與同樣的運算</p>
+    <p>陣列就像置物櫃一樣，透過index，可以存放物品，可以取出</p>
+
+    <script>
+
+        // 10. 什麼時候我們需要一個陣列？
+        var object1 = "1";
+        var object2 = "2";
+        var object3 = "3";
+        var object4 = "4";
+        var object5 = "5";
+        var object6 = "6";
+        var object7 = "7";
+        var object8 = "8";
+        var object9 = "9";
+        var object10 = "10";
+        
+        // 20. 該怎麼樣宣告一個陣列？
+        var fruit = ["apple", "tangerine", "banana"];
+        console.log(fruit); // Array(3) -> (3) ['apple', 'tangerine', 'banana']
+
+        // 25. 該怎麼把東西放進去？
+        fruit[0] = "pineapple"; // (3) ['apple', 'tangerine', 'banana']
+        console.log(fruit); // (3) ['pineapple', 'tangerine', 'banana']
+        
+        fruit[3] = "durian";
+        console.log(fruit); // (4) ['pineapple', 'tangerine', 'banana', 'durian']
+        
+        // 30. 陣列中的陣列
+        var arrayArray = [["hamsandwich", "burger"], ["soda", "water"], ["fruit cup", "green salad"]]; // (3) [Array(2), Array(2), Array(2)]
+        console.log(arrayArray);
+        console.log(arrayArray[1][1]); // water
+
+        // 40. 如果要取得 poker陣列 裡面的13，要如何取得?
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        console.log(poker[0][12]); // 13
+    </script>
+</body>
+
+</html>

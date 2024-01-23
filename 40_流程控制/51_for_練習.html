@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <div id="pSquare"></div>
+    <hr>
+    <div id="pTriangle"></div>
+    <div id="nightNight"></div>
+
+    <script>
+        // 10. 使用 for 迴圈，在 console 呈現 這個月1號 到 目前系統日
+        var d = new Date();
+        var m = d.getMonth();
+        var date = d.getDate();
+        for (var i = 1; i <= date; i++) {
+            var j = i.toString().padStart(2, "0")
+            console.log(`日期 ==> ${m + 1}/${j}`);
+        }
+
+        // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        for (var x = 0; x < weekList.length; x++) {
+            console.log(weekList[x]);
+        }
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        var sum = 0;
+        for (var y = 1; y <= 10; y++) {
+            sum = sum + y;
+            console.log(`y = ${y} sum = ${sum}`);
+        }
+
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+        // ****
+        // ****
+        // ****
+        // ****
+        // ****
+        // ****
+        var star = "";
+        for (var r = 1; r <= 6; r++) {
+            for (var c = 1; c <= 4; c++) {
+                star = star + "*";
+            }
+            star = star + "\n";
+            // star = star + "<br>"
+        }
+        document.getElementById("pSquare").innerText = star;
+
+        // document.getElementById("pSquare").innerHTML = star;
+        // 50. 雙層迴圈 - 三角形 #pTriangle -> 個數與列有相關
+        // *
+        // **
+        // ***
+        // **** 
+        var money = "";
+        for (var row = 1; row <= 4; row++) {
+            for (var column = 1; column <= row; column++) {
+                console.log(money);
+                money = money + "$";
+            }
+            money = money + "\n";
+        }
+        document.getElementById("pTriangle").innerText = money;
+
+        // 60. 雙層迴圈 - 九九乘法表
+        var word = '';
+        var total = 0;
+        for (var g = 1; g <= 9; g++) {
+            for (var h = 2; h <= 9; h++) {
+                word = word + h + "*";
+                total = (g * h).toString().padStart(2,"0");
+                word = word + g + "=" + total + "\t";
+            }
+            word = word + "\n";
+        }
+        document.getElementById("nightNight").innerText = word;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        // 假設飲料店的飲料均一價
+        // 小練習：設計一個function，傳入數量和單價
+        //        數量10杯以上總金額打95折，20杯以上打9折
+        var total = 0;
+        function money(q,p) {
+            var q = prompt("請輸入飲料杯數");
+            var p = prompt("請輸入飲料單價");
+            if (q >= 20) {
+                total = q * p * 0.9;
+            } else if (q >= 10) {
+                total = q * p * 0.95;
+            } else {
+                total = q * p;
+            }
+            return Math.round(total);
+            // Math.floor 小數點無條件捨棄
+            // Math.ceil  小數點無條件進位
+            // Math.round 小數點四捨五入
+        }
+        var s = money();
+        console.log(s);
+
+    </script>
+</body>
+
+</html>

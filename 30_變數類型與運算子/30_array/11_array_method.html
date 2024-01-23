@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Array Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></p>
+
+    <script>
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 10. 陣列的取值和長度
+        console.log(weekList.length); // 7
+        
+        // 12. 陣列.toString() -> 陣列轉字串(以","做資料串接)
+        console.log(weekList.toString()); // sunday,monday,tuesday,wednesday,thursday,friday,saturday
+        
+        // 13. 陣列.join("#") -> 陣列轉字串(可以指定串接的符號)
+        console.log(weekList.join("#")); // sunday#monday#tuesday#wednesday#thursday#friday#saturday
+        
+        // 14. 移除陣列中第一份資料
+        var firstData = weekList.shift()
+        console.log(weekList); 
+        
+        // 15. 移除陣列中最後一份資料
+        var firstData = weekList.pop()
+        console.log(weekList); 
+        
+        // 16. 有哪N種方式可以加入資料到陣列中?
+        weekList.push("pushData"); // 把資料加到最後一個
+        console.log(weekList); // (6) ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'pushData']
+        
+        weekList.unshift("unshiftData"); // 把資料加到第一個
+        console.log(weekList); // (7) ['unshiftData', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'pushData']
+        
+        weekList[weekList.length] = "newData"; // 透過index加入資料
+        console.log(weekList); // (8) ['unshiftData', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'pushData', 'newData']
+        
+        weekList.splice(2,0,1,"spliceData1","spliceData2","spliceData3")
+        console.log(weekList); // (12) ['unshiftData', 'monday', 1, 'spliceData1', 'spliceData2', 'spliceData3', 'tuesday', 'wednesday', 'thursday', 'friday', 'pushData', 'newData']
+    
+        // 20. 二維陣列的長度
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        console.log(poker.length);
+        console.log(poker[0].length);
+
+    </script>
+</body>
+
+</html>

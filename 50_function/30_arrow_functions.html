@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>ES6 新增的箭頭函式</h4>
+    <p><a
+            href="https://www.w3schools.com/js/js_arrow_function.asp">https://www.w3schools.com/js/js_arrow_function.asp</a>
+    </p>
+
+    <script>
+
+        // 10. 透過 函式運算式 宣告一個 function
+        /* var f = function(){
+            console.log("this is a function.");
+        }
+        f(); */
+
+        // 20. 精簡後的樣子 () => 
+        /* var f = ()=>{
+            console.log("this is a function.");
+        }
+        f(); */
+
+        // 30. 可以有參數的傳入 (para) => 
+        /* var func = function (x, y) {
+            return x * y;
+        }
+        var z = func(10, 20);
+        console.log(z); */
+
+        var func = (x, y) => x * y;
+
+        var z = func(10, 20);
+        console.log(z);
+
+        // 40. 如果說需要多個陳述句子 () => {}
+        var x = (a, b) => {
+            a++;
+            return a * b;
+        }
+        var c = x(10, 20);
+        console.log(c);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <p id="demo">點選圖片後，放大圖片和文字</p>
+    
+    <!-- 10. 設定一張圖片 -->
+    <img id="bell" onclick="change()" src="../../image/notification.png" alt="bell">
+    <script>
+        function change(){
+            console.log("綁定成功");
+            // 20. 網頁的 圖片的 樣式的 寬度 改變
+            document.getElementById("bell").style.width = "100px";
+
+            // 21. 網頁的 圖片的 樣式的 高度 改變
+            document.getElementById("bell").style.width = "30px";
+
+            // 22. 網頁的 demo的 樣式的 字型 改變
+            document.getElementById("demo").style.fontSize = "24px";
+        }
+
+
+    </script>
+    
+</body>
+
+</html>

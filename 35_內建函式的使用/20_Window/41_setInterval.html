@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <h4>指定的秒數，做指定的事情</h4>
+    <p><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">https://www.w3schools.com/jsref/met_win_setinterval.asp</a></p>
+
+    <script>
+        var cnt = 0;
+
+        function apple() {
+            cnt += 1;
+            console.log(` apple() ==>  ${cnt} `);
+        }
+
+        // apple(); // apple() ==>  1 
+        // apple(); // apple() ==>  2 
+
+        // 10. 放入  apple -> 成功執行 // 每一秒套一個()在apple後面，因此會每秒執行一次apple()
+        // setInterval(apple, 1000);
+        
+        // 20. 放入 'apple()' -> 一秒鐘執行一次(成功執行)
+        // setInterval('apple()', 1000);
+        
+        // 30. 放入  apple() -> 只執行一次
+        // setInterval(apple(), 1000);
+        
+        // 40. 呼叫 setInterval 時改為直接放入 function 
+        /* var thousand = 1000;
+        setInterval(function () {
+            cnt += 1;
+            console.log(` apple() ==>  ${cnt} `);
+        }, thousand); */
+
+        setInterval(function(){
+            console.log("a");
+        }, 1000);
+
+    </script>
+</body>
+
+</html>

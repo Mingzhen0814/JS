@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Number Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_number_methods.asp">https://www.w3schools.com/js/js_number_methods.asp</a></p>
+
+    <script>
+ 
+        // 20. 數值運算常見的錯誤
+        // NaN(Not a Number)、Infinity、-Infinity
+        var x = 10;
+        var y = "string";
+        var notANumber = x / y;
+        console.log(notANumber); // NaN
+        
+        var i = 0;
+        var inFinity = x / i;
+        console.log(inFinity); // Infinity
+        
+        var j = -0;
+        var negInFinity = x / j;
+        console.log(negInFinity); // -Infinity
+
+        // 30. 數值轉字串的方法 toString()
+        var num = 100;
+        console.log(num);
+        console.log(typeof num);
+        
+        var numToStr = num.toString();
+        console.log(numToStr);
+        console.log(typeof numToStr);
+
+
+    </script>
+
+</body>
+
+</html>

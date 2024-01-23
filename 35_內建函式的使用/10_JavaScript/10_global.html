@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>Alphabetical JavaScript Reference</h4>
+    <p><a
+            href="https://www.w3schools.com/jsref/jsref_reference.asp">https://www.w3schools.com/jsref/jsref_reference.asp</a>
+    </p>
+    <h4>JavaScript Global Reference</h4>
+    <p><a
+            href="https://www.w3schools.com/jsref/jsref_obj_global.asp">https://www.w3schools.com/jsref/jsref_obj_global.asp</a>
+    </p>
+
+    <script>
+        // "+"的用法
+        // 1. 四則運算的加法
+        // 2. 字串與字串之間(或一方為字串)的串接
+
+        // 10. 關於"字串"的運算..
+        //     a. "11" + 1
+        //     b. "11" - 1 
+        var x = "11" + 1;
+        var y = "11" - 1;
+        console.log(x); // 111
+        console.log(typeof x); // string
+        console.log(y); // 10
+        console.log(typeof y); // number
+
+        // 20. parseInt() 把文字轉換為數值 (預設為10進位的轉換方式)
+        // parseInt()不隸屬於物件之下 -> global
+        var z = parseInt("11") + 2;
+        console.log(z);
+        console.log(typeof z); // number
+
+    </script>
+
+</body>
+
+</html>

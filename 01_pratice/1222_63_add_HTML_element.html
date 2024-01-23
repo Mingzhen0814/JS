@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /* var i = 1;
+        // 每一秒中增加一個新的<img>
+        function addElement() {
+            // 20. createElement 增加一個元素 (img)
+            var x = document.createElement("img"); // <img>
+            
+            // 21. setAttribute  設定新增元素的屬性
+            x.setAttribute("src", ".././1219_JavaScript/image/find.png"); // <img src="">
+            x.setAttribute("id", `find${i}`); // <img id=""> -> 使ID成為唯一值
+            
+            // 22. appendChild   直接在Html文件中增加元素
+            document.body.appendChild(x); // 在畫面中顯示
+
+            i++;
+        }
+        setInterval(addElement,1000); */
+
+        // 每一秒中增加一個新的<img>，且三張圖片隨機
+        var imgArray = ["find.png", "like.png", "notification.png"];
+        function addImgRandom(){
+            var imgRandom = Math.floor(Math.random() * imgArray.length); // 隨機一定要在function內，才會每次都隨機
+            var img = document.createElement("img");
+            img.setAttribute("src",`.././1219_JavaScript/image/${imgArray[imgRandom]}`);
+            document.body.appendChild(img);
+        }
+        setInterval(addImgRandom,1000);
+    </script>
+
+</body>
+
+</html>

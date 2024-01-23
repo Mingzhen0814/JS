@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1></h1>
+
+
+    <script>
+        // 10. 取得系統現在時間(HH)
+        var t = new Date();
+        var h = t.getHours();
+        console.log(h);
+        var text1 = document.createElement("h1");
+        var text2 = document.createElement("h1")
+        // 11. 如果是 8點 ~ 11點，顯示上午課程
+        // 12. 如果是 12點，顯示中午用餐時間
+        // 13. 如果是 13點 ~ 16點，顯示下午課程
+        // 14. 其他的時段，顯示非課程時間
+        /* if (h < 8) {
+            console.log("非課程時間");
+        } else if (h < 12) {
+            console.log("上午課程");
+        } else if (h < 13) {
+            console.log("中午用餐時間");
+        } else if (h < 16) {
+            console.log("下午課程");
+        } else {
+            console.log("非課程時間");
+        } */
+
+        if (h >=8 && h<=11) {
+            console.log("上午課程");
+        } else if (h == 12) {
+            console.log("中午用餐時間");
+        } else if (h >= 13 && h<=16) {
+            console.log("下午課程");
+        } else {
+            console.log("非課程時間");
+        }
+        // 20. 透過三元運算子，判斷現在是 'AM' 還是 'PM'
+        /* var x;
+        if (h <= 12){
+            x = "AM";
+        } else {
+            x = "PM";
+        }
+        console.log(x); */
+
+        var x = (h <= 12)? "AM":"PM";
+    </script>
+
+</body>
+
+</html>

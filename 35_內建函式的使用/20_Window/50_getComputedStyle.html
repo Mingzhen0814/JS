@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* #bell {
+            position: relative;
+            top: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- 10. 畫面上設定一張圖片 -->
+    <img id="bell" style="position: relative;top: 20px;" src="../../image/notification.png" alt="">
+    <script>
+
+        // 20. 透過 元素.style.top 取得 樣式 top 值 // style不寫在元素內取不到樣式
+        var x = document.getElementById("bell");
+        var y = x.style.top;
+        // var z = document.getElementById("bell").style.top;
+        console.log(y);
+
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性));
+        var a = window.getComputedStyle(x);
+        var b = a.getPropertyValue("top");
+        
+        // var c = window.getComputedStyle(x).getPropertyValue("top");
+        console.log(b);
+
+        // 40. 觀察上述兩者差異
+
+    </script>
+</body>
+
+</html>

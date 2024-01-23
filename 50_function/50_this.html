@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>this 關鍵字代表什麼值，取決於你在哪裡使用它</h4>
+    <p><a href="https://www.w3schools.com/js/js_this.asp" target="_blank">The JavaScript <b>this</b> Keyword</a></p>
+    <button onclick="thing('click!')">1</button>
+    <button onclick="thing(2)">2</button>
+    <button onclick="thing([])">3</button>
+    <button onclick="thing({})">4</button>
+    <button onclick="text(this)">5</button>
+    <script>
+
+        // 10. Alone, this refers to the global object.
+        console.log(this); // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+        // 20. In a method, this refers to the owner object.
+        var apple = {
+            color: "red",
+            price: 50,
+            quantity: 3,
+            friends: ["banana", "pineapple"],
+            action1: function thisObject() {
+                console.log(this); // {color: 'red', price: 50, quantity: 3, friends: Array(2), action: ƒ}
+                // return price * quantity; //price is not defined at Object.action
+                return this.price * this.quantity;
+            },
+            action2: () => {
+                console.log(this); // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+            }
+        }
+        var a = apple.action1();
+        console.log(a);
+
+        // 30. In an event, this refers to the element that received the event.
+        function thing(x){
+            console.log(x);
+        }
+
+        // 只抓取元素內容  
+        function text(y){
+            console.log(y.innerText);
+        }
+    </script>
+
+</body>
+
+</html>

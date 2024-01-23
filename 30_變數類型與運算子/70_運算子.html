@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Operators</h4>
+    <p><a href="https://www.w3schools.com/js/js_operators.asp">https://www.w3schools.com/js/js_operators.asp</a></p>
+
+    <script>
+
+        // 算術運算子：四則運算、取餘數 (%) 等
+        var a = 10;
+        var b = 3;
+
+        // 10. 取餘數 %
+        console.log(`a % b = ${a % b}`); // a % b = 1
+
+        // 11. ++變數  和  變數++ 
+        var i = 1;
+        // i = i + 1; //2
+        // i += 1; //2
+        // i++; //2
+        // ++i; //2
+        console.log(i);
+        console.log(i++); // 1 -> 先顯示i再加1
+        console.log(i); // 2
+        console.log(++i); // 2 -> 先加1再顯示i
+
+
+        // 比較運算子：評估條件，回傳 true 或者 false 值
+        var x = 10;
+        var y = "10";
+        var z = 5;
+
+        // 20. == 和 === 的差異在? 比較兩者是否相等
+        console.log(`x == y -> ${x == y}`) // x == y -> true
+        console.log(`x === y -> ${x === y}`) // x === y -> false 
+
+        // 1. =   傳值/傳址/給值
+        // 2. ==  比較兩者是否相等
+        // 3. === 比較兩者是否相等(多比較了資料型態)
+
+        // 21. 測試 2 > 1
+        console.log(2 > 1); // true
+
+        // 22. 測試 1 < 2 < 3 和 3 > 2 > 1
+        console.log(1 < 2 < 3); // true
+        console.log(3 > 2 > 1); // false // (3 > 2) = true = 1 (因此不大於1)
+
+        // 23. 測試 true == 1 還有 false == 0 
+        console.log(true == 1); // true
+        console.log(false == 0); // true
+
+
+
+        // 邏輯運算子
+        // 30. 不等於的寫法 (!=)
+        var p = 100;
+        var q = 200;
+        console.log(p != q); // true
+
+        // 40. and (&&) 條件需要同時成立的時候
+        // 情境: 比對HTML畫面的帳號密碼與資料庫的資料有沒有吻合
+        var userID = "kaoszu";
+        var userPWD = "12345";
+        if (userID == "kaoszu" && userPWD == "1234") {
+            console.log("登入成功")
+        } else {
+            console.log("登入失敗")
+        }
+
+        // 50. or (||) 條件擇一成立
+        // 情境: OTA選擇四星或五星級
+        var fourStar = "checked";
+        var fiveStar = "checked";
+        if (fourStar == "checked" || fiveStar == "unchecked") {
+            console.log("條件成立")
+        } else {
+            console.log("條件不成立")
+        }
+
+        // 70. 三元運算子 (condition) ? value1:value2
+        // var temp = "";
+        // if (5 > 3) {
+        //     temp = "成立";
+        // } else {
+        //     temp = "不成立";
+        // }
+
+        var temp = 5 > 3 ? "成立" : "不成立";
+        var temp = 5 > 3 ? 1 : 0;
+        console.log(temp);
+    </script>
+
+</body>
+
+</html>

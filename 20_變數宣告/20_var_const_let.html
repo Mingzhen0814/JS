@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    
+    <h3>JavaScript Versions：<a href="https://www.w3schools.com/js/js_versions.asp">https://www.w3schools.com/js/js_versions.asp</a></h3>
+    <h3>ECMAScript 5 - 2009：<a href="https://www.w3schools.com/js/js_es5.asp">https://www.w3schools.com/js/js_es5.asp</a></h3>
+    <h3>ECMAScript 6 - 2015：<a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></h3>
+    
+    <h3>JavaScript Let：<a href="https://www.w3schools.com/js/js_let.asp">https://www.w3schools.com/js/js_let.asp</a></h3>
+    <h3>JavaScript Const：<a href="https://www.w3schools.com/js/js_const.asp">https://www.w3schools.com/js/js_const.asp</a></h3>
+    
+    <script>
+        // 10. var、let、const 宣告變數的方法
+        var x = 1;
+        let y = 2;
+        const z = 3;
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+        // 20. const 變數宣告並給值後是否還能修改?(某些情況可以)
+        // z = 100;
+        // console.log(z); // Assignment to constant variable.
+
+        // 30. 在 if 判斷句中，透過 var、let 宣告兩個變數，並觀察他們的作用域(生命週期)
+        // if(the condition is true){要做的事}
+        if(100 > 50){
+            var a = 100;
+            let b = 200;
+            console.log(a); // 100
+            console.log(b); // 200
+        }
+        console.log(a); // 100 (作用於範圍外)
+        // console.log(b); // b is not defined
+        
+        // 40. 測試 var 宣告相同的變數名稱
+        var i = 123;
+        var i = 456;
+        console.log(i);
+
+        // 50. 測試 let 宣告相同的變數名稱 
+        let j = 789;
+        // let j = 987; // let不可宣告同一個變數名稱
+        console.log(j);
+        
+    </script>
+</body>
+
+</html>

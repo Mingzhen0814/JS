@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <!-- 使用 do.. while 完成底下練習 -->
+    <!-- 10. 設計網頁上應該要有的元素 -->
+    <button onclick="money()">開始統計飲料金額</button>
+    <h1 id="text"></h1>
+    <script>
+        var sum = 0;
+        var each = [];
+        function money() {
+            do {
+                // 20. 透過 prompt 讓使用者輸入資料
+                // 30. 若使用者輸入 0 表示不再輸入
+                var i = prompt("請輸入飲料金額，輸入完畢請按0");
+
+                // 防止使用者沒輸入資料 -> NaN 或 跳開計算
+                if (i.length > 0) {
+                    sum = sum + parseInt(i);
+                    each.push(i); // 將資料加入到陣列的最後一筆
+                }
+
+            } while (i != 0 || i.length == 0)
+            each.pop(); // 移除陣列最後一筆資料
+            //     畫面顯示 全部輸入過的資料 和 總金額
+            var text = document.getElementById("text").innerText = `${each.join("+")} ==> 總金額為:${sum}`
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h3>點選圖片後，置換成另外一張圖片</h3>
+
+    <!-- 10. 設定一張圖片 -->
+    <img id="img" onclick="changeImg()" src="../../image/find.png" alt="">
+
+    <script>
+        function changeImg() {
+            console.log("綁定成功");
+            
+            // 11. 取得上一個步驟的圖片
+            // 20. 設定點選圖片後，換成另外一張圖片
+            document.getElementById("img").src = "../../image/like.png";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
